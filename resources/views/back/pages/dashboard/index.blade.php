@@ -1,4 +1,4 @@
-@extends('back.app')
+ @extends('back.app')
 @section('content')
     <div id="kt_app_content" class="app-content flex-column-fluid ">
         <div id="kt_app_content_container" class="app-container  container-xxl ">
@@ -42,8 +42,8 @@
                             </div>
                             <div class="text-center mb-1">
                                <p>
-                                Selamat datang di halaman admin PDM Bukittinggi <br>
-                                Dashboard ini adalah tempat untuk melihat data dan statistik dari website PDM Bukittinggi
+                                Selamat datang di halaman admin MUI Kab.Agam <br>
+                                Dashboard ini adalah tempat untuk melihat data dan statistik dari website MUI Kab.Agam
                                </p>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                 <div class="col-sm-6 col-xl-2 mb-xl-10">
                     <div class="card h-lg-100">
                         <div class="card-body d-flex justify-content-between align-items-start flex-column">
-                            
+
                             <div class="d-flex flex-column my-7">
                                 <span class="fw-semibold fs-3x text-gray-800 lh-1 ls-n2">{{ $pengumuman_count }}</span>
                                 <div class="m-0">
@@ -126,7 +126,7 @@
                                 <span class="text-white fs-3 fw-bold me-2">Facebook Campaign</span>
                                 <span class="badge badge-success">Active</span>
                             </h3>
-                            
+
                         </div>
                         <div class="card-body d-flex justify-content-between flex-column pt-1 px-0 pb-0">
                             <div class="d-flex flex-wrap px-9 mb-5">

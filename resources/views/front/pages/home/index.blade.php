@@ -105,7 +105,7 @@
                     </p>
                     <img src="{{ asset('images/sholat.png') }}" alt="Orang Sholat" class="img-fluid">
                     <h5 class="mt-3" style="font-weight: bold; color: #333;">{{ date('d F Y H:i') }}</h5>
-                    
+
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead>
@@ -275,14 +275,14 @@
                     <!-- section Tittle -->
                     <div class="row">
                         <div class="col-md-4">
-                            <img src="{{ asset('front/img/logo/logo_muhammadiyah.png') }}" alt=""
+                            <img src="{{ asset('front/img/logo/logo_mui.png') }}" alt=""
                                 class="img-fluid">
                         </div>
                         <div class="col-md-8 mt-sm-20">
                             <h1 style="color: #08652F; font-weight: bold;">
-                                Pimpinan Daerah Muhammadiyah (PDM)
+                                Majelis Ulama Indonesia
                             </h1>
-                            <h2 style="color: #08652F; ">Kota Bukittinggi</h2>
+                            <h2 style="color: #08652F; ">Kabupaten Agam</h2>
                             <div class="mt-3 about">
                                 <p>
                                     {!! $setting_web->about !!}
@@ -547,8 +547,8 @@
                                             </div>
 
                                             <div class="col-md-5">
-                                                <iframe
-                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14217.899744230352!2d100.38151331598215!3d-0.3014266340436995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd5389cf1e72cab%3A0xbb5d0a65083a1cbb!2sPanti%20Asuhan%20Aisyiah%20Putra!5e0!3m2!1sid!2sid!4v1725587482668!5m2!1sid!2sid"
+                                                    <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63836.11246307859!2d100.34725027216172!3d-0.3175860366418373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd5399114bc32b3%3A0x91ced2aca8177b6a!2sMUI%20Nagari%20Sungai%20Pua!5e0!3m2!1sid!2sid!4v1735666852612!5m2!1sid!2sid"
                                                     height="450" style="border:0; width: 100%; border-radius: 20px;"
                                                     allowfullscreen="" loading="lazy"
                                                     referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -574,7 +574,7 @@
             success: function(response) {
                 let data = response.data.jadwal;
                 console.log(data);
-                
+
                 let html = '';
                 data.forEach((item, index) => {
                     html += `
@@ -600,7 +600,7 @@
             success: function(response) {
                 let data = response.data.jadwal;
                 console.log(data);
-                
+
                 let html = '';
                 html += `
                         <tr>

@@ -133,16 +133,14 @@
                                 Copyright &copy;
                                 <script>
                                     document.write(new Date().getFullYear());
-                                </script> Pimpinan Daerah Muhammadiyah Bukittinggi<a
-                                    href="https://gariskode.com" target="_blank">.
-                                </a>
+                                </script> Majelis Ulama Indonesia Kab. Agam
                             </p>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="footer-menu f-right">
                             <ul>
-                                <li><a href="#">Terms of use</a></li>
+                                <li><a href="https://gariskode.com">Support</a></li>
                                 <li><a href="#">Privacy Policy</a></li>
                                 <li><a href="#">Contact</a></li>
                             </ul>

@@ -27,13 +27,13 @@ class DatabaseSeeder extends Seeder
 
         $office = User::create([
             'name' => 'Admin Garis Kode',
-            'email' => 'office@gariskode.com',
+            'email' => '    ',
             'password' => bcrypt('password'),
             'status' => 1
         ]);
 
         $office->assignRole('admin');
-        
+
         $fajri = User::create([
             'name' => 'Fajri Rinaldi Chan',
             'email' => 'fajri@gariskode.com',
