@@ -118,7 +118,7 @@
                                         </li>
                                         <li><a href="{{ route('kajian') }}">Kajian</a></li>
                                         <li><a href="{{ route('asset') }}">Asset</a></li>
-                                        <li><a href="{{ route('keanggotaan') }}">Keanggotaan</a></li>
+                                        <li><a href="{{ route('keanggotaan') }}">Da'i MUI</a></li>
                                         <li><a href="#">Ortom</a>
                                             <ul class="submenu">
                                                 @php
@@ -185,7 +185,7 @@
                                 <div class="search-box">
                                     <form action="#">
                                         <input type="text" placeholder="Search">
-                                        
+
                                     </form>
                                 </div>
                             </div> -->
