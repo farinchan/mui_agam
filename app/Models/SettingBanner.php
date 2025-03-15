@@ -17,5 +17,5 @@ class SettingBanner extends Model
     {
         return $this->image ? Storage::url($this->image) : asset('images/default.png');
     }
-    
+
 }
