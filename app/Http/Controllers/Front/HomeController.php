@@ -13,10 +13,13 @@ use App\Models\Pengumuman;
 use App\Models\SettingBanner;
 use App\Models\SettingWebsite;
 use App\Models\Subscriber;
+use App\Models\Visitor;
 use App\Models\WelcomeSpeech;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Jenssegers\Agent\Facades\Agent;
 use RealRashid\SweetAlert\Facades\Alert;
+use Stevebauman\Location\Facades\Location;
 
 class HomeController extends Controller
 {
@@ -98,5 +101,32 @@ class HomeController extends Controller
         Alert::success('Berhasil', 'Email berhasil disubscribe');
         return redirect()->back();
 
+    }
+
+    public function vistWebsite()
+    {
+        try {
+            $currentUserInfo = Location::get(request()->ip());
+            $visitor = new Visitor();
+            $visitor->ip = request()->ip();
+            if ($currentUserInfo) {
+                $visitor->country = $currentUserInfo->countryName;
+                $visitor->city = $currentUserInfo->cityName;
+                $visitor->region = $currentUserInfo->regionName;
+                $visitor->postal_code = $currentUserInfo->postalCode;
+                $visitor->latitude = $currentUserInfo->latitude;
+                $visitor->longitude = $currentUserInfo->longitude;
+                $visitor->timezone = $currentUserInfo->timezone;
+            }
+            $visitor->user_agent = Agent::getUserAgent();
+            $visitor->platform = Agent::platform();
+            $visitor->browser = Agent::browser();
+            $visitor->device = Agent::device();
+            $visitor->save();
+
+            return response()->json(['status' => 'success', 'message' => 'Visitor has been saved'], 200);
+        } catch (\Throwable $th) {
+            return response()->json(['status' => 'error', 'message' => $th->getMessage()], 500);
+        }
     }
 }

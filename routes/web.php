@@ -35,6 +35,7 @@ use App\Http\Controllers\Front\EventController;
 use App\Http\Controllers\Front\GalleryController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/visit', [HomeController::class, 'vistWebsite'])->name('visit.ajax');
 Route::post('/message', [HomeController::class, 'message'])->name('message');
 Route::Post('/subscribe', [HomeController::class, 'subscribe'])->name('subscribe');
 
@@ -97,6 +98,7 @@ Route::prefix('user')->middleware(['auth', 'role:user'])->name('user.')->group(f
 
 Route::prefix('admin')->middleware(['auth', 'role:admin'])->name('admin.')->group(function () {
     Route::get('/dashboard', [BackDashboardController::class, 'index'])->name('dashboard');
+    Route::get('/visitor-stat', [BackDashboardController::class, 'visistorStat'])->name('visitor.stat');
 
     Route::prefix('dashboard')->name('dashboard.')->group(function () {
         Route::get('/news', [BackDashboardController::class, 'news'])->name('news');
