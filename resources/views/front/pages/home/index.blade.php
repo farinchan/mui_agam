@@ -327,7 +327,7 @@
                                 style="font-size: 24px; font-weight: bold; color: #333; position: relative; display: inline-block;" class="mb-5">
                                 Pengumuman
                                 <span
-                                    style="display: block; width: 50px; height: 3px; background-color: #00A7A7; position: absolute; bottom: -15px; left: 0;"></span>
+                                    style="display: block; width: 50px; height: 3px; background-color: #08652F; position: absolute; bottom: -15px; left: 0;"></span>
                             </h2>
                             {{-- <hr> --}}
                             @foreach ($pengumumans as $pengumuman)
