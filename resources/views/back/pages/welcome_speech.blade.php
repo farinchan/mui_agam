@@ -51,7 +51,7 @@
                                 </span>
                             </div>
                             <div class="text-muted fs-7">
-                                Set foto ketua PDM disini
+                                Set foto ketua MUI disini
                             </div>
                         </div>
                     </div>
