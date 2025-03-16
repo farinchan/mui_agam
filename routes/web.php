@@ -18,6 +18,7 @@ use App\Http\Controllers\Front\User\ProfileController as UserProfileController;
 use App\Http\Controllers\Front\User\DashboardController as UserDashboardController;
 
 use App\Http\Controllers\Back\DashboardController as BackDashboardController;
+use App\Http\Controllers\Back\EventController as BackEventController;
 use App\Http\Controllers\Back\UserController as BackUserController;
 use App\Http\Controllers\Back\NewsController as BackNewsController;
 use App\Http\Controllers\Back\PengumumanController as BackPengumumanController;
@@ -95,6 +96,15 @@ Route::prefix('admin')->middleware(['auth', 'role:admin'])->name('admin.')->grou
     Route::prefix('dashboard')->name('dashboard.')->group(function () {
         Route::get('/news', [BackDashboardController::class, 'news'])->name('news');
         Route::get('/stat', [BackDashboardController::class, 'stat'])->name('news.stat');
+    });
+
+    Route::prefix('event')->name('event.')->group(function () {
+        Route::get('/', [BackEventController::class, 'index'])->name('index');
+        Route::get('/create', [BackEventController::class, 'create'])->name('create');
+        Route::post('/create', [BackEventController::class, 'store'])->name('store');
+        Route::get('/edit/{id}', [BackEventController::class, 'edit'])->name('edit');
+        Route::put('/edit/{id}', [BackEventController::class, 'update'])->name('update');
+        Route::delete('/delete/{id}', [BackEventController::class, 'destroy'])->name('destroy');
     });
 
     Route::prefix('inbox')->name('inbox.')->group(function () {

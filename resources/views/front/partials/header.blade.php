@@ -116,6 +116,7 @@
                                                 @endforeach
                                             </ul>
                                         </li>
+                                        <li><a href="{{ route('admin.news.category', 'fatwa') }}">Fatwa</a></li>
                                         <li><a href="{{ route('kajian') }}">Kajian</a></li>
                                         <li><a href="{{ route('asset') }}">Asset</a></li>
                                         <li><a href="{{ route('keanggotaan') }}">Da'i MUI</a></li>

@@ -35,8 +35,8 @@
         }
 
         /* .carousel-caption{
-                                                        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-                                                    } */
+                                                                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+                                                                } */
         .carousel-item::before {
             content: '';
             position: absolute;
@@ -55,6 +55,59 @@
 
         .about a {
             color: #3c5e4d;
+        }
+
+        .latest-events {
+            display: inline-block;
+            max-width: 340px;
+            margin-bottom: 30px;
+        }
+
+        .events-date {
+            float: left;
+            height: 84px;
+            width: 95px;
+            font-size: 13px;
+            font-weight: 500;
+            border-radius: 10px;
+            margin-right: 20px;
+            background-color: #fff;
+        }
+
+        .relative-position {
+            position: relative;
+        }
+
+        .gradient-bdr {
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 10px;
+            -webkit-transform: scale(1.06);
+            -ms-transform: scale(1.06);
+            transform: scale(1.06);
+            background: -o-linear-gradient(69deg, #319276, #1beabd);
+            background: linear-gradient(21deg, #319276, #1beabd);
+            background: -webkit-linear-gradient(69deg, #319276, #1beabd);
+        }
+
+        .events-date span {
+            font-size: 50px;
+            padding-top: 8px;
+            color: #333333;
+            line-height: 1;
+            display: block;
+        }
+
+        .event-text {
+            overflow: hidden;
+        }
+
+        .latest-title {
+            font-size: 18px;
+            color: #333333;
+            margin-bottom: 10px;
         }
     </style>
 @endsection
@@ -96,53 +149,6 @@
             </div>
         </div>
 
-        {{-- <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h4 class="mt-3" style="font-weight: bold; color: #333;">Jadwal Shalat Hari ini</h4>
-                    <p style="font-size: 14px; color: #333;">
-                        Waktu shalat hari ini di Kota Bukittinggi
-                    </p>
-                    <img src="{{ asset('images/sholat.png') }}" alt="Orang Sholat" class="img-fluid">
-                    <h5 class="mt-3" style="font-weight: bold; color: #333;">{{ date('d F Y H:i') }}</h5>
-
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Subuh</th>
-                                    <th>Dzuhur</th>
-                                    <th>Ashar</th>
-                                    <th>Maghrib</th>
-                                    <th>Isya</th>
-                                </tr>
-                            </thead>
-                            <tbody id="jadwal-sholat-hari-ini">
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h4 style="font-weight: bold; color: #333;">Jadwal shalat bulan ini</h4>
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Tanggal</th>
-                                    <th>Subuh</th>
-                                    <th>Dzuhur</th>
-                                    <th>Ashar</th>
-                                    <th>Maghrib</th>
-                                    <th>Isya</th>
-                                </tr>
-                            </thead>
-                            <tbody id="jadwal-sholat-bulan-ini">
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
 
         <!-- Trending Area Start -->
         <div class="trending-area fix">
@@ -242,7 +248,7 @@
                                 <div class="trand-right-single d-flex">
                                     <div class="trand-right-img ">
                                         <img src="{{ $pengumuman->image ? Storage::url($pengumuman->image) : 'https://file.iainpare.ac.id/wp-content/uploads/2019/07/pengumuman.png' }}"
-                                             alt="" style="height: 70px; width: 70px; object-fit: cover;">
+                                            alt="" style="height: 70px; width: 70px; object-fit: cover;">
                                     </div>
 
                                     <div class="trand-right-cap">
@@ -268,31 +274,121 @@
         </div>
         <!-- Trending Area End -->
 
+
+        <!-- Trending Area Start -->
+        <div class="trending-area fix">
+            <div class="container">
+                <div class="trending-main">
+
+                    <div class="row mt-5">
+
+                        <div class="col-lg-8">
+                            <h2
+                                style="font-size: 24px; font-weight: bold; color: #333; position: relative; display: inline-block;">
+                                Agenda
+                                <span
+                                    style="display: block; width: 50px; height: 3px; background-color: #00A7A7; position: absolute; bottom: -15px; left: 0;"></span>
+                            </h2>
+
+                            {{-- <hr> --}}
+
+                            <div class="row mt-5">
+                                @foreach ($events as $event)
+                                    <div class="col-md-6">
+                                        <div class="latest-events">
+                                            <div class="latest-event-item">
+                                                <div class="events-date  relative-position text-center">
+                                                    <div class="gradient-bdr"></div>
+                                                    <span
+                                                        class="event-date bold-font">{{ Carbon\Carbon::parse($event->start)->format('d') }}</span>
+                                                    {{ Carbon\Carbon::parse($event->start)->format('M Y') }}
+                                                </div>
+                                                <div class="event-text">
+                                                    <h3 class="latest-title bold-font">
+                                                        <a style="color: #333;" href="#"
+                                                            onmouseover="this.style.color='#00A7A7'"
+                                                            onmouseout="this.style.color='#333'">
+                                                            {{ $event->title }}
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+
+                            {{-- <div class="text-right">
+                                <a class="text-info " href="">
+                                    Lihat Selengkapnya >
+                                </a>
+                            </div> --}}
+                        </div>
+                        <div class="col-lg-4">
+                            <h2
+                                style="font-size: 24px; font-weight: bold; color: #333; position: relative; display: inline-block;" class="mb-5">
+                                Pengumuman
+                                <span
+                                    style="display: block; width: 50px; height: 3px; background-color: #00A7A7; position: absolute; bottom: -15px; left: 0;"></span>
+                            </h2>
+                            {{-- <hr> --}}
+                            @foreach ($pengumumans as $pengumuman)
+                                <div class="trand-right-single d-flex">
+                                    {{-- <div class="trand-right-img ">
+                                        <img src="{{ $pengumuman->image ? Storage::url($pengumuman->image) : 'https://file.iainpare.ac.id/wp-content/uploads/2019/07/pengumuman.png' }}"
+                                            alt="" style="height: 70px; width: 70px; object-fit: cover;">
+                                    </div> --}}
+
+                                    <div class="trand-right-cap" style="padding-left: 0;">
+                                        {{-- <span class="color4">Pengumuman</span> --}}
+                                        <div style="font-size: 12px; color: #333;">
+                                            {{ $pengumuman->created_at->diffForHumans() }} </div>
+                                        <h4 style=" font-size: 16px;"><a
+                                                href="{{ route('pengumuman.detail', $pengumuman->slug) }}">
+                                                {{ Str::limit($pengumuman->title, 80) }}
+                                            </a></h4>
+                                    </div>
+                                </div>
+                            @endforeach
+                            {{-- <div class="text-right">
+                                <a class="text-info " href="">
+                                    Lihat Selengkapnya >
+                                </a>
+                            </div> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Trending Area End -->
+
         <!--   Weekly2-News start -->
         <div class="weekly2-news-area  weekly2-pading gray-bg">
             <div class="container">
                 <h1 style="color: #08652F; font-weight: bold;" class="text-center mb-5">
                     Kata Sambutan <br>
-                     Majelis Ulama Indonesia (MUI) Kab. Agam
-                 </h1>
+                    Majelis Ulama Indonesia (MUI) Kab. Agam
+                </h1>
                 <div class="weekly2-wrapper">
                     <!-- section Tittle -->
                     <div class="row">
                         <div class="col-md-4">
-                            <img src="{{ $welcome_speech?->getImage() ?? "-" }}" alt="" style="height: 400px;"
+                            <img src="{{ $welcome_speech?->getImage() ?? '-' }}" alt="" style="height: 400px;"
                                 class="img-fluid">
                         </div>
                         <div class="col-md-8 mt-sm-20">
 
-                            <h2 style="color: #08652F; font-size: 26px;" class="mt-2">{{ $welcome_speech?->name?? "-" }}</h2>
+                            <h2 style="color: #08652F; font-size: 26px;" class="mt-2">
+                                {{ $welcome_speech?->name ?? '-' }}</h2>
                             <div class="mt-3 about">
                                 <p>
                                     Assalamu’alaikum Warahmatullahi Wabarakatuh,
                                 </p>
                                 <p>
-                                    {{ Str::limit(strip_tags($welcome_speech?->content??"-"), 500, '...') }}
+                                    {{ Str::limit(strip_tags($welcome_speech?->content ?? '-'), 500, '...') }}
                                 </p>
-                                <button class="button rounded-0 primary-bg text-white  btn_1 boxed-btn" type="submit">Lihat selengkapnya</button>
+                                <button class="button rounded-0 primary-bg text-white  btn_1 boxed-btn"
+                                    type="submit">Lihat selengkapnya</button>
                             </div>
                         </div>
                     </div>
@@ -513,15 +609,16 @@
 
 
         <!--   Instagram start -->
-        <div class="weekly-news-area pt-50">
+        {{-- <div class="weekly-news-area pt-50">
             <div class="container">
                 <div class="weekly-wrapper">
                     <div class="row">
-                        <div class="tagembed-widget" style="width:100%;height:100%" data-widget-id="2159172" data-tags="false"  view-url="https://widget.tagembed.com/2159172"></div>
+                        <div class="tagembed-widget" style="width:100%;height:100%" data-widget-id="2159172"
+                            data-tags="false" view-url="https://widget.tagembed.com/2159172"></div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- End Instagram -->
 
         <!--   Weekly2-News start -->
@@ -586,7 +683,7 @@
     </main>
 @endsection
 @section('scripts')
-<script src="https://widget.tagembed.com/embed.min.js" type="text/javascript"></script>
+    <script src="https://widget.tagembed.com/embed.min.js" type="text/javascript"></script>
     <script>
         $.ajax({
             url: "https://api.myquran.com/v2/sholat/jadwal/0119/2024/1",

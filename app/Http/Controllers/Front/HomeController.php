@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\ContactUs;
+use App\Models\Event;
 use App\Models\Gallery;
 use App\Models\GalleryAlbum;
 use App\Models\Kajian;
@@ -30,6 +31,7 @@ class HomeController extends Controller
             'setting_web' => $setting_web,
 
             'banner_list' => SettingBanner::latest()->get(),
+            'events' => Event::latest()->limit(8)->get(),
             'news' => news::with('category')->latest()->limit(4)->get(),
             'pengumumans' => Pengumuman::latest()->limit(5)->get(),
             'welcome_speech' => WelcomeSpeech::first(),

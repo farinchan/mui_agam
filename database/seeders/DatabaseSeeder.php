@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\ContactUs;
+use App\Models\Event;
 use App\Models\Profile;
 use App\Models\SettingBanner;
 use App\Models\SettingWebsite;
@@ -27,7 +28,7 @@ class DatabaseSeeder extends Seeder
 
         $office = User::create([
             'name' => 'Admin Garis Kode',
-            'email' => '    ',
+            'email' => 'office@gariskode.com',
             'password' => bcrypt('password'),
             'status' => 1
         ]);
@@ -61,6 +62,8 @@ class DatabaseSeeder extends Seeder
             'linkedin' => 'https://linkedin.com',
             'about' => 'Pimpinan Daerah Muhammadiyah Kota Bukittinggi adalah organisasi Islam yang bergerak dalam bidang sosial, pendidikan, dan kesehatan.',
         ]);
+
+        Event::factory(10)->create();
 
         Profile::create([
             'name' => 'Sejarah',

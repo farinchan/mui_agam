@@ -221,6 +221,6 @@ class GalleryController extends Controller
         Alert::success('Success', 'Foto/Video berhasil dihapus');
         return redirect()->route('admin.gallery.index');
     }
-    
+
 
 }
