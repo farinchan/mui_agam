@@ -1,4 +1,9 @@
 <header>
+    <style>
+        li {
+            margin: 0 -4px;
+        }
+    </style>
     <!-- Header Start -->
     <div class="header-area">
         <div class="main-header ">
@@ -83,16 +88,16 @@
                     <div class="row align-items-center">
                         <div class="col-xl-9 col-lg-9 col-md-12 header-flex">
                             <!-- sticky -->
-                            <div class="sticky-logo">
+                            <div class="sticky-logo mt-2">
                                 <a href="{{ route('home') }}"><img src="{{ Storage::url($setting_web->logo) }}"
-                                        width="200px" alt=""></a>
+                                        width="150px" alt=""></a>
                             </div>
                             <!-- Main-menu -->
                             <div class="main-menu d-none d-md-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="{{ route('home') }}">Home</a></li>
-                                        <li><a href="#">Profile</a>
+                                        <li><a href="{{ route('home') }}" style="font-size: 16px">Home</a></li>
+                                        <li><a href="#" style="font-size: 16px">Profile</a>
                                             <ul class="submenu">
                                                 @php
                                                     $profiles = \App\Models\Profile::all();
@@ -104,7 +109,7 @@
                                                 @endforeach
                                             </ul>
                                         </li>
-                                        <li><a href="{{ route('news') }}">Berita</a>
+                                        <li><a href="{{ route('news') }}" style="font-size: 16px">Berita</a>
                                             <ul class="submenu">
                                                 @php
                                                     $categories = \App\Models\NewsCategory::all();
@@ -116,11 +121,11 @@
                                                 @endforeach
                                             </ul>
                                         </li>
-                                        <li><a href="{{ route('admin.news.category', 'fatwa') }}">Fatwa</a></li>
-                                        <li><a href="{{ route('kajian') }}">Kajian</a></li>
-                                        <li><a href="{{ route('asset') }}">Asset</a></li>
-                                        <li><a href="{{ route('keanggotaan') }}">Da'i MUI</a></li>
-                                        <li><a href="#">Ortom</a>
+                                        <li><a href="{{ route('admin.news.category', 'fatwa') }}" style="font-size: 16px">Fatwa</a></li>
+                                        <li><a href="{{ route('kajian') }}" style="font-size: 16px">Kajian</a></li>
+                                        <li><a href="{{ route('asset') }}" style="font-size: 16px">Asset</a></li>
+                                        <li><a href="{{ route('keanggotaan') }}" style="font-size: 16px">Da'i MUI</a></li>
+                                        <li><a href="#" style="font-size: 16px">Ortom</a>
                                             <ul class="submenu">
                                                 @php
                                                     $list_ortom = \App\Models\OrganisasiOtonom::all();
@@ -132,7 +137,7 @@
                                                 @endforeach
                                             </ul>
                                         </li>
-                                        <li><a href="{{ route('contact') }}">Kontak</a></li>
+                                        <li><a href="{{ route('contact') }}" style="font-size: 16px">Kontak</a></li>
 
                                         <div id="login_mobile" >
                                             @auth

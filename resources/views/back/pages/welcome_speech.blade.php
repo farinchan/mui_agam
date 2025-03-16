@@ -44,7 +44,7 @@
                                 </span>
                                 <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
                                     data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Hapus Thumbnail">
-                                    <i class="ki-duotone ki-cross fs-2">
+                                <i class="ki-duotone ki-cross fs-2">
                                         <span class="path1"></span>
                                         <span class="path2"></span>
                                     </i>
