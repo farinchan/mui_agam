@@ -39,6 +39,8 @@ Route::get('/visit', [HomeController::class, 'vistWebsite'])->name('visit.ajax')
 Route::post('/message', [HomeController::class, 'message'])->name('message');
 Route::Post('/subscribe', [HomeController::class, 'subscribe'])->name('subscribe');
 
+Route::get('/welcome', [HomeController::class, 'welcomeSpeech'])->name('welcome.speech');
+
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'loginProcess'])->name('login.process');
 Route::get('/register', [AuthController::class, 'register'])->name('register');

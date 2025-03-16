@@ -385,8 +385,8 @@
                                 <p>
                                     {{ Str::limit(strip_tags($welcome_speech?->content ?? '-'), 500, '...') }}
                                 </p>
-                                <button class="button rounded-0 primary-bg text-white  btn_1 boxed-btn"
-                                    type="submit">Lihat selengkapnya</button>
+                                <a href="{{ route("welcome.speech") }}" class="button rounded-0 primary-bg text-white  btn_1 boxed-btn"
+                                    type="submit">Lihat selengkapnya</a>
                             </div>
                         </div>
                     </div>

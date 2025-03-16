@@ -129,4 +129,20 @@ class HomeController extends Controller
             return response()->json(['status' => 'error', 'message' => $th->getMessage()], 500);
         }
     }
+
+    public function welcomeSpeech(Request $request)
+    {
+        $welcome = WelcomeSpeech::first();
+
+        $data = [
+            'title' => "Sambutan Ketua MUI Kab.Agam | " . $welcome?->name??"-",
+            'meta_description' => strip_tags($welcome?->content),
+            'meta_keywords' => $welcome?->name,
+            'favicon' => $welcome?->image,
+            'setting_web' => SettingWebsite::first(),
+            'welcome' => $welcome
+        ];
+
+        return view('front.pages.home.welcome_speech', $data);
+    }
 }
