@@ -31,8 +31,13 @@ class HomeController extends Controller
             'setting_web' => $setting_web,
 
             'banner_list' => SettingBanner::latest()->get(),
-            'events' => Event::latest()->limit(8)->get(),
-            'news' => news::with('category')->latest()->limit(4)->get(),
+            'events' => Event::where('is_active', 1)->latest()->limit(4)->get(),
+            'news' => news::with('category')->where('status', 'published')->whereHas('category', function ($query) {
+                $query->where('name', '!=', 'fatwa');
+            })->latest()->limit(4)->get(),
+            'fatwas' => news::with('category')->where('status', 'published')->whereHas('category', function ($query) {
+                $query->where('name', 'fatwa');
+            })->latest()->limit(4)->get(),
             'pengumumans' => Pengumuman::latest()->limit(5)->get(),
             'welcome_speech' => WelcomeSpeech::first(),
             'kajians' => Kajian::latest()->where('status', 'published')->limit(4)->get(),

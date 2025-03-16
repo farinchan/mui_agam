@@ -16,85 +16,76 @@ class NewsSeeder extends Seeder
     public function run(): void
     {
         NewsCategory::create([
-            'name' => 'Berita PDM',
-            'slug' => 'berita-pdm',
-            'description' => 'Memuat berita-berita terbaru dari Pimpinan Daerah Muhammadiyah (PDM) Kota Bukittinggi',
+            'name' => 'Berita',
+            'slug' => 'berita',
+            'description' => 'Memuat berita-berita terbaru dari MUI Kab. Agam',
             'meta_title' => 'Berita PDM Kota Bukittinggi',
-            'meta_description' => 'Berita-berita terbaru dari Pimpinan Daerah Muhammadiyah (PDM) Kota Bukittinggi',
+            'meta_description' => 'Berita-berita terbaru dari MUI Kab. Agam',
             'meta_keywords' => 'berita, berita terbaru, berita pdm, berita pdm kota bukittinggi',
         ]);
 
         NewsCategory::create([
-            'name' => 'Berita Ortom',
-            'slug' => 'berita-ortom',
-            'description' => 'Memuat berita-berita terbaru dari Organisasi Otonom Muhammadiyah (ORTOM) Kota Bukittinggi',
-            'meta_title' => 'Berita ORTOM Kota Bukittinggi',
-            'meta_description' => 'Berita-berita terbaru dari Organisasi Otonom Muhammadiyah (ORTOM) Kota Bukittinggi',
-            'meta_keywords' => 'berita, berita terbaru, berita ortom, berita ortom kota bukittinggi',
-        ]);
-
-        NewsCategory::create([
-            'name' => 'Putusan',
-            'slug' => 'putusan',
-            'description' => 'Memuat putusan-putusan Pimpinan Daerah Muhammadiyah (PDM) Kota Bukittinggi',
-            'meta_title' => 'Putusan PDM Kota Bukittinggi',
-            'meta_description' => 'Putusan-putusan Pimpinan Daerah Muhammadiyah (PDM) Kota Bukittinggi',
-            'meta_keywords' => 'putusan, putusan pdm, putusan pdm kota bukittinggi',
+            'name' => 'Fatwa',
+            'slug' => 'fatwa',
+            'description' => 'Memuat fatwa-fatwa terbaru dari Pimpinan Daerah MUI Kab. Agam',
+            'meta_title' => 'Fatwa PDM Kota Bukittinggi',
+            'meta_description' => 'Fatwa-fatwa terbaru dari Pimpinan Daerah MUI Kab. Agam',
+            'meta_keywords' => 'fatwa, fatwa terbaru, fatwa pdm, fatwa pdm kota bukittinggi',
         ]);
 
         News::create([
-            'title' => 'Muhammadiyah Tetapkan Idul Adha 1445 Jatuh Pada Senin, 17 Juni 2024. inilah Penjelasannya',
-            'slug' => 'muhammadiyah-tetapkan-idul-adha-1445-jatuh-pada-senin-17-juni-2024-inilah-penjelasannya',
-            'content' => 'Pimpinan Pusat Muhammadiyah telah menetapkan Idul Adha 1445 jatuh pada Senin, 17 Juni 2024. Penetapan ini berdasarkan hasil hisab dan rukyat yang dilakukan oleh Pimpinan Pusat Muhammadiyah.',
-            'thumbnail' => 'news/example.png',
-            'category_id' => 3,
-            'user_id' => 1,
-            'status' => 'published',
-            'meta_title' => 'Muhammadiyah Tetapkan Idul Adha 1445 Jatuh Pada Senin, 17 Juni 2024. inilah Penjelasannya',
-            'meta_description' => 'Pimpinan Pusat Muhammadiyah telah menetapkan Idul Adha 1445 jatuh pada Senin, 17 Juni 2024',
-            'meta_keywords' => 'muhammadiyah, idul adha, 1445, senin, 17 juni 2024',
-        ]);
-
-        News::create([
-            'title' => 'Pimpinan Daerah Muhammadiyah (PDM) Kota Bukittinggi Gelar Rapat Kerja Tahunan',
-            'slug' => 'pimpinan-daerah-muhammadiyah-pdm-kota-bukittinggi-gelar-rapat-kerja-tahunan',
-            'content' => 'Pimpinan Daerah Muhammadiyah (PDM) Kota Bukittinggi menggelar rapat kerja tahunan di kantor PDM Kota Bukittinggi. Rapat kerja tahunan ini dihadiri oleh seluruh pengurus PDM Kota Bukittinggi.',
+            'title' => 'MUI Kabupaten Agam Tetapkan Idul Adha 1445 Jatuh Pada Senin, 17 Juni 2024. inilah Penjelasannya',
+            'slug' => 'mui-kabupaten-agam-tetapkan-idul-adha-1445-jatuh-pada-senin-17-juni-2024-inilah-penjelasannya',
+            'content' => 'Majelis Ulama Indonesia (MUI) Kabupaten Agam telah menetapkan Idul Adha 1445 jatuh pada Senin, 17 Juni 2024. Penetapan ini berdasarkan hasil hisab dan rukyat yang dilakukan oleh MUI Kabupaten Agam.',
             'thumbnail' => 'news/example.png',
             'category_id' => 1,
             'user_id' => 1,
             'status' => 'published',
-            'meta_title' => 'Pimpinan Daerah Muhammadiyah (PDM) Kota Bukittinggi Gelar Rapat Kerja Tahunan',
-            'meta_description' => 'Pimpinan Daerah Muhammadiyah (PDM) Kota Bukittinggi menggelar rapat kerja tahunan di kantor PDM Kota Bukittinggi',
-            'meta_keywords' => 'pdm kota bukittinggi, rapat kerja tahunan',
+            'meta_title' => 'MUI Kabupaten Agam Tetapkan Idul Adha 1445 Jatuh Pada Senin, 17 Juni 2024. inilah Penjelasannya',
+            'meta_description' => 'Majelis Ulama Indonesia (MUI) Kabupaten Agam telah menetapkan Idul Adha 1445 jatuh pada Senin, 17 Juni 2024',
+            'meta_keywords' => 'mui, idul adha, 1445, senin, 17 juni 2024',
         ]);
 
         News::create([
-            'title' => 'Ikatan Mahasiswa Muhammadiyah (IMM) Kota Bukittinggi Gelar Kegiatan Donor Darah dan Bakti Sosial',
-            'slug' => 'imm-kota-bukittinggi-gelar-kegiatan-donor-darah-dan-bakti-sosial',
-            'content' => 'Ikatan Mahasiswa Muhammadiyah (IMM) Kota Bukittinggi menggelar kegiatan donor darah dan bakti sosial di kampus IMM Kota Bukittinggi. Kegiatan ini dihadiri oleh seluruh mahasiswa IMM Kota Bukittinggi.',
+            'title' => 'MUI Kabupaten Agam Gelar Rapat Kerja Tahunan',
+            'slug' => 'mui-kabupaten-agam-gelar-rapat-kerja-tahunan',
+            'content' => 'Majelis Ulama Indonesia (MUI) Kabupaten Agam menggelar rapat kerja tahunan di kantor MUI Kabupaten Agam. Rapat kerja tahunan ini dihadiri oleh seluruh pengurus MUI Kabupaten Agam.',
+            'thumbnail' => 'news/example.png',
+            'category_id' => 1,
+            'user_id' => 1,
+            'status' => 'published',
+            'meta_title' => 'MUI Kabupaten Agam Gelar Rapat Kerja Tahunan',
+            'meta_description' => 'Majelis Ulama Indonesia (MUI) Kabupaten Agam menggelar rapat kerja tahunan di kantor MUI Kabupaten Agam',
+            'meta_keywords' => 'mui kabupaten agam, rapat kerja tahunan',
+        ]);
+
+        News::create([
+            'title' => 'Ikatan Remaja Masjid (IRM) Kabupaten Agam Gelar Kegiatan Donor Darah dan Bakti Sosial',
+            'slug' => 'irm-kabupaten-agam-gelar-kegiatan-donor-darah-dan-bakti-sosial',
+            'content' => 'Ikatan Remaja Masjid (IRM) Kabupaten Agam menggelar kegiatan donor darah dan bakti sosial di masjid-masjid Kabupaten Agam. Kegiatan ini dihadiri oleh seluruh remaja masjid di Kabupaten Agam.',
             'thumbnail' => 'news/example.png',
             'category_id' => 2,
             'user_id' => 1,
             'status' => 'published',
-            'meta_title' => 'IMM Kota Bukittinggi Gelar Kegiatan Donor Darah dan Bakti Sosial',
-            'meta_description' => 'Ikatan Mahasiswa Muhammadiyah (IMM) Kota Bukittinggi menggelar kegiatan donor darah dan bakti sosial di kampus IMM Kota Bukittinggi',
-            'meta_keywords' => 'imm kota bukittinggi, donor darah, bakti sosial',
+            'meta_title' => 'IRM Kabupaten Agam Gelar Kegiatan Donor Darah dan Bakti Sosial',
+            'meta_description' => 'Ikatan Remaja Masjid (IRM) Kabupaten Agam menggelar kegiatan donor darah dan bakti sosial di masjid-masjid Kabupaten Agam',
+            'meta_keywords' => 'irm kabupaten agam, donor darah, bakti sosial',
         ]);
 
         News::create([
-            'title' => 'Pemuda Muhammadiyah Kota Bukittinggi Gelar Kegiatan Kemanusiaan di Daerah Terpencil',
-            'slug' => 'pemuda-muhammadiyah-kota-bukittinggi-gelar-kegiatan-kemanusiaan-di-daerah-terpencil',
-            'content' => 'Pemuda Muhammadiyah Kota Bukittinggi menggelar kegiatan kemanusiaan di daerah terpencil. Kegiatan ini dihadiri oleh seluruh anggota Pemuda Muhammadiyah Kota Bukittinggi.',
+            'title' => 'Pemuda MUI Kabupaten Agam Gelar Kegiatan Kemanusiaan di Daerah Terpencil',
+            'slug' => 'pemuda-mui-kabupaten-agam-gelar-kegiatan-kemanusiaan-di-daerah-terpencil',
+            'content' => 'Pemuda MUI Kabupaten Agam menggelar kegiatan kemanusiaan di daerah terpencil. Kegiatan ini dihadiri oleh seluruh anggota Pemuda MUI Kabupaten Agam.',
             'thumbnail' => 'news/example.png',
             'category_id' => 2,
             'user_id' => 1,
             'status' => 'published',
-            'meta_title' => 'Pemuda Muhammadiyah Kota Bukittinggi Gelar Kegiatan Kemanusiaan di Daerah Terpencil',
-            'meta_description' => 'Pemuda Muhammadiyah Kota Bukittinggi menggelar kegiatan kemanusiaan di daerah terpencil',
-            'meta_keywords' => 'pemuda muhammadiyah kota bukittinggi, kemanusiaan, daerah terpencil',
+            'meta_title' => 'Pemuda MUI Kabupaten Agam Gelar Kegiatan Kemanusiaan di Daerah Terpencil',
+            'meta_description' => 'Pemuda MUI Kabupaten Agam menggelar kegiatan kemanusiaan di daerah terpencil',
+            'meta_keywords' => 'pemuda mui kabupaten agam, kemanusiaan, daerah terpencil',
         ]);
 
-        
+
 
         NewsComment::create([
             'name' => 'User Test 1',

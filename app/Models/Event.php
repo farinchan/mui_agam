@@ -42,7 +42,7 @@ class Event extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function getImage()
+    public function getThumbnail()
     {
         return $this->image ? Storage::url($this->image) : asset('back/media/svg/files/blank-image.svg');
     }

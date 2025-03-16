@@ -21,8 +21,11 @@
                 @if (request()->routeIs('news.category'))
                     <div class="col-lg-8">
                         <div class="blog_left_sidebar">
-                            <h2 class="mb-3" style="background-color: #f8faf8; padding: 10px; border-radius: 5px;">
-                                <i class="fas fa-tags"></i> {{ $category->name }}
+                            <h2 class="mb-5"
+                                style="font-size: 24px; font-weight: bold; color: #333; position: relative; display: inline-block;">
+                                {{ $category->name??"-" }}
+                                <span
+                                    style="display: block; width: 50px; height: 3px; background-color: #08652F; position: absolute; bottom: -15px; left: 0;"></span>
                             </h2>
                         </div>
                     </div>

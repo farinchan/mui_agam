@@ -31,7 +31,8 @@ use App\Http\Controllers\Back\inboxController as BackInboxController;
 use App\Http\Controllers\Back\SettingController as BackSettingController;
 use App\Http\Controllers\Back\ProfileController as BackProfileController;
 use App\Http\Controllers\Back\OrtomController as BackOrtomController;
-
+use App\Http\Controllers\Front\EventController;
+use App\Http\Controllers\Front\GalleryController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/message', [HomeController::class, 'message'])->name('message');
@@ -55,6 +56,10 @@ Route::get('/news', [NewsController::class, 'news'])->name('news');
 Route::get('/news/{slug}', [NewsController::class, 'detail'])->name('news.detail');
 Route::post('/news/comment/{id}', [NewsController::class, 'comment'])->name('news.comment');
 Route::get('/news/category/{slug}', [NewsController::class, 'category'])->name('news.category');
+
+Route::get('/event/{slug}', [EventController::class, 'detail'])->name('event.detail');
+
+Route::get('/gallery/{slug}', [GalleryController::class, 'detail'])->name('gallery.detail');
 
 Route::get('/kajian', [KajianController::class, 'kajian'])->name('kajian');
 Route::get('/kajian/{slug}', [KajianController::class, 'detail'])->name('kajian.detail');

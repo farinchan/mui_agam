@@ -87,9 +87,9 @@
             -webkit-transform: scale(1.06);
             -ms-transform: scale(1.06);
             transform: scale(1.06);
-            background: -o-linear-gradient(69deg, #319276, #1beabd);
-            background: linear-gradient(21deg, #319276, #1beabd);
-            background: -webkit-linear-gradient(69deg, #319276, #1beabd);
+            background: -o-linear-gradient(69deg, #319276, #08652F);
+            background: linear-gradient(21deg, #319276, #08652F);
+            background: -webkit-linear-gradient(69deg, #319276, #08652F);
         }
 
         .events-date span {
@@ -239,34 +239,31 @@
                         </div>
                         <!-- Riht content -->
                         <div class="col-lg-4">
-                            <h4
-                                style="font-weight: bold; color: #333; background-color: #e7ffe6; padding: 10px; border-radius: 5px; margin-bottom: 30px;">
-                                Fatwa
-                            </h4>
+                            <h2 class="mb-5"
+                                style="font-size: 24px; font-weight: bold; color: #333; position: relative; display: inline-block;">
+                                Fatwa MUI
+                                <span
+                                    style="display: block; width: 50px; height: 3px; background-color: #08652F; position: absolute; bottom: -15px; left: 0;"></span>
+                            </h2>
                             {{-- <hr> --}}
-                            @foreach ($pengumumans as $pengumuman)
+                            @foreach ($fatwas as $fatwa)
                                 <div class="trand-right-single d-flex">
                                     <div class="trand-right-img ">
-                                        <img src="{{ $pengumuman->image ? Storage::url($pengumuman->image) : 'https://file.iainpare.ac.id/wp-content/uploads/2019/07/pengumuman.png' }}"
+                                        <img src="{{ $fatwa->image ? Storage::url($fatwa->image) : 'https://file.iainpare.ac.id/wp-content/uploads/2019/07/fatwa.png' }}"
                                             alt="" style="height: 70px; width: 70px; object-fit: cover;">
                                     </div>
 
                                     <div class="trand-right-cap">
-                                        {{-- <span class="color4">Pengumuman</span> --}}
+                                        {{-- <span class="color4">fatwa</span> --}}
                                         <div style="font-size: 12px; color: #333;">
-                                            {{ $pengumuman->created_at->diffForHumans() }} </div>
+                                            {{ $fatwa->created_at->diffForHumans() }} </div>
                                         <h4 style=" font-size: 16px;"><a
-                                                href="{{ route('pengumuman.detail', $pengumuman->slug) }}">
-                                                {{ Str::limit($pengumuman->title, 80) }}
+                                                href="{{ route('news.detail', $fatwa->slug) }}">
+                                                {{ Str::limit($fatwa->title, 80) }}
                                             </a></h4>
                                     </div>
                                 </div>
                             @endforeach
-                            <div class="text-right">
-                                <a class="text-info " href="">
-                                    Lihat Selengkapnya >
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -287,7 +284,7 @@
                                 style="font-size: 24px; font-weight: bold; color: #333; position: relative; display: inline-block;">
                                 Agenda
                                 <span
-                                    style="display: block; width: 50px; height: 3px; background-color: #00A7A7; position: absolute; bottom: -15px; left: 0;"></span>
+                                    style="display: block; width: 50px; height: 3px; background-color: #08652F; position: absolute; bottom: -15px; left: 0;"></span>
                             </h2>
 
                             {{-- <hr> --}}
@@ -305,8 +302,8 @@
                                                 </div>
                                                 <div class="event-text">
                                                     <h3 class="latest-title bold-font">
-                                                        <a style="color: #333;" href="#"
-                                                            onmouseover="this.style.color='#00A7A7'"
+                                                        <a style="color: #333;" href="{{ route('event.detail', $event->slug) }}"
+                                                            onmouseover="this.style.color='#08652F'"
                                                             onmouseout="this.style.color='#333'">
                                                             {{ $event->title }}
                                                         </a>
@@ -569,7 +566,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="section-tittle mb-30">
-                                <h3>Galeri PDM</h3>
+                                <h3>Galeri MUI</h3>
                             </div>
                         </div>
                     </div>
@@ -585,7 +582,7 @@
                                         </div>
                                         <div class="weekly-caption">
                                             {{-- <span class="color1">Travel</span> --}}
-                                            <h4><a href="">{{ $album->title }}</a></h4>
+                                            <h4><a href="{{ route('gallery.detail', $album->slug) }}">{{ $album->title }}</a></h4>
                                             <p style="margin-top: -10px; margin-bottom: 0;">
                                                 {{ $album->created_at->diffForHumans() }}
                                             </p>

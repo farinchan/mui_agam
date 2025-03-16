@@ -109,10 +109,10 @@ class NewsController extends Controller
                 $query->where('slug', $slug);
             });
         $setting_web = SettingWebsite::first();
- 
+
 
         $data = [
-            'title' => "News - " . $newsCategory->where('slug', $slug)->first()->name ." | " . $setting_web->name,
+            'title' => "News - " . $newsCategory->where('slug', $slug)->first()?->name?? "-" ." | " . $setting_web->name,
             'meta_description' => strip_tags($setting_web->about),
             'meta_keywords' => 'News, Muhammadiyah, Bukittinggi',
             'favicon' => $setting_web->favicon,

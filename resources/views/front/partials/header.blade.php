@@ -121,7 +121,7 @@
                                                 @endforeach
                                             </ul>
                                         </li>
-                                        <li><a href="{{ route('admin.news.category', 'fatwa') }}" style="font-size: 16px">Fatwa</a></li>
+                                        <li><a href="{{ route('news.category', 'fatwa') }}" style="font-size: 16px">Fatwa</a></li>
                                         <li><a href="{{ route('kajian') }}" style="font-size: 16px">Kajian</a></li>
                                         <li><a href="{{ route('asset') }}" style="font-size: 16px">Asset</a></li>
                                         <li><a href="{{ route('keanggotaan') }}" style="font-size: 16px">Da'i MUI</a></li>
