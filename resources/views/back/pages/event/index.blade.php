@@ -52,7 +52,7 @@
                                         <div class="d-flex">
                                             <a href="#" class="symbol symbol-50px">
                                                 <span class="symbol-label"
-                                                    style="background-image:url({{ $event->getImage() }});"></span>
+                                                    style="background-image:url({{ $event->getThumbnail() }});"></span>
                                             </a>
                                             <div class="ms-5">
                                                 <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1"
