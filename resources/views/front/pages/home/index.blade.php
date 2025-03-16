@@ -249,7 +249,7 @@
                             @foreach ($fatwas as $fatwa)
                                 <div class="trand-right-single d-flex">
                                     <div class="trand-right-img ">
-                                        <img src="{{ $fatwa->image ? Storage::url($fatwa->image) : 'https://file.iainpare.ac.id/wp-content/uploads/2019/07/fatwa.png' }}"
+                                        <img src="{{ Storage::url($fatwa->thumbnail)  }}"
                                             alt="" style="height: 70px; width: 70px; object-fit: cover;">
                                     </div>
 

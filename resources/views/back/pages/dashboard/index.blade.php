@@ -158,7 +158,7 @@
                     <div class="card card-flush h-lg-100">
                         <div class="card-header pt-5">
                             <h3 class="card-title align-items-start flex-column">
-                                <span class="card-label fw-bold text-gray-900">Statistik Pengunjung berita sebulan
+                                <span class="card-label fw-bold text-gray-900">Statistik pengunjung website sebulan
                                     terakhir</span>
                             </h3>
                         </div>
