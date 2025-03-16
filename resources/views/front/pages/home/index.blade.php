@@ -234,15 +234,15 @@
                         <!-- Riht content -->
                         <div class="col-lg-4">
                             <h4
-                                style="font-weight: bold; color: #333; background-color: #e7ffe6; padding: 10px; border-radius: 5px;">
-                                Pengumuman
+                                style="font-weight: bold; color: #333; background-color: #e7ffe6; padding: 10px; border-radius: 5px; margin-bottom: 30px;">
+                                Fatwa
                             </h4>
-                            <hr>
+                            {{-- <hr> --}}
                             @foreach ($pengumumans as $pengumuman)
                                 <div class="trand-right-single d-flex">
                                     <div class="trand-right-img ">
                                         <img src="{{ $pengumuman->image ? Storage::url($pengumuman->image) : 'https://file.iainpare.ac.id/wp-content/uploads/2019/07/pengumuman.png' }}"
-                                            height="70px" alt="">
+                                             alt="" style="height: 70px; width: 70px; object-fit: cover;">
                                     </div>
 
                                     <div class="trand-right-cap">
@@ -271,22 +271,28 @@
         <!--   Weekly2-News start -->
         <div class="weekly2-news-area  weekly2-pading gray-bg">
             <div class="container">
+                <h1 style="color: #08652F; font-weight: bold;" class="text-center mb-5">
+                    Kata Sambutan <br>
+                     Majelis Ulama Indonesia (MUI) Kab. Agam
+                 </h1>
                 <div class="weekly2-wrapper">
                     <!-- section Tittle -->
                     <div class="row">
                         <div class="col-md-4">
-                            <img src="{{ asset('front/img/logo/logo_mui.png') }}" alt=""
+                            <img src="{{ $welcome_speech?->getImage() ?? "-" }}" alt="" style="height: 400px;"
                                 class="img-fluid">
                         </div>
                         <div class="col-md-8 mt-sm-20">
-                            <h1 style="color: #08652F; font-weight: bold;">
-                                Majelis Ulama Indonesia
-                            </h1>
-                            <h2 style="color: #08652F; ">Kabupaten Agam</h2>
+
+                            <h2 style="color: #08652F; font-size: 26px;" class="mt-2">{{ $welcome_speech?->name?? "-" }}</h2>
                             <div class="mt-3 about">
                                 <p>
-                                    {!! $setting_web->about !!}
+                                    Assalamu’alaikum Warahmatullahi Wabarakatuh,
                                 </p>
+                                <p>
+                                    {{ Str::limit(strip_tags($welcome_speech?->content??"-"), 500, '...') }}
+                                </p>
+                                <button class="button rounded-0 primary-bg text-white  btn_1 boxed-btn" type="submit">Lihat selengkapnya</button>
                             </div>
                         </div>
                     </div>
@@ -467,7 +473,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="section-tittle mb-30">
-                                <h3>Galeri MUI Agam</h3>
+                                <h3>Galeri PDM</h3>
                             </div>
                         </div>
                     </div>
@@ -504,6 +510,19 @@
             </div>
         </div>
         <!-- End Weekly-News -->
+
+
+        <!--   Instagram start -->
+        <div class="weekly-news-area pt-50">
+            <div class="container">
+                <div class="weekly-wrapper">
+                    <div class="row">
+                        <div class="tagembed-widget" style="width:100%;height:100%" data-widget-id="2159172" data-tags="false"  view-url="https://widget.tagembed.com/2159172"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Instagram -->
 
         <!--   Weekly2-News start -->
         <div class="weekly2-news-area  weekly2-pading gray-bg">
@@ -547,8 +566,8 @@
                                             </div>
 
                                             <div class="col-md-5">
-                                                    <iframe
-                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63836.11246307859!2d100.34725027216172!3d-0.3175860366418373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd5399114bc32b3%3A0x91ced2aca8177b6a!2sMUI%20Nagari%20Sungai%20Pua!5e0!3m2!1sid!2sid!4v1735666852612!5m2!1sid!2sid"
+                                                <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14217.899744230352!2d100.38151331598215!3d-0.3014266340436995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd5389cf1e72cab%3A0xbb5d0a65083a1cbb!2sPanti%20Asuhan%20Aisyiah%20Putra!5e0!3m2!1sid!2sid!4v1725587482668!5m2!1sid!2sid"
                                                     height="450" style="border:0; width: 100%; border-radius: 20px;"
                                                     allowfullscreen="" loading="lazy"
                                                     referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -567,6 +586,7 @@
     </main>
 @endsection
 @section('scripts')
+<script src="https://widget.tagembed.com/embed.min.js" type="text/javascript"></script>
     <script>
         $.ajax({
             url: "https://api.myquran.com/v2/sholat/jadwal/0119/2024/1",

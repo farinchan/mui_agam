@@ -12,6 +12,7 @@ use App\Models\Pengumuman;
 use App\Models\SettingBanner;
 use App\Models\SettingWebsite;
 use App\Models\Subscriber;
+use App\Models\WelcomeSpeech;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -31,7 +32,8 @@ class HomeController extends Controller
             'banner_list' => SettingBanner::latest()->get(),
             'news' => news::with('category')->latest()->limit(4)->get(),
             'pengumumans' => Pengumuman::latest()->limit(5)->get(),
-            'kajians' => Kajian::latest()->where('status', 'published')->limit(6)->get(),
+            'welcome_speech' => WelcomeSpeech::first(),
+            'kajians' => Kajian::latest()->where('status', 'published')->limit(4)->get(),
             'list_album' => GalleryAlbum::latest()->limit(6)->get(),
 
         ];
