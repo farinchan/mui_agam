@@ -68,9 +68,9 @@
 
 @section('content')
     <main class="m-5">
-        <h1 class="text-center">Aset Pimpinan Daerah Muhammadiyah</h1>
+        <h1 class="text-center">Aset Majelis Ulama Indonesia</h1>
         <h2 class="text-center mb-5">
-            Kota Bukiittinggi
+            Kabupaten Agam
         </h2>
         <div class="row">
             <div class="col-md-10">
