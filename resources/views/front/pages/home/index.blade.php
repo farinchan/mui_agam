@@ -28,7 +28,7 @@
         }
 
         .image-banner {
-            height: 700px;
+            height: 900px;
             width: 100%;
             object-fit: cover;
             background: #333;
@@ -263,6 +263,7 @@
                                             </a></h4>
                                     </div>
                                 </div>
+
                             @endforeach
                         </div>
                     </div>
