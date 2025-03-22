@@ -20,7 +20,7 @@ return new class extends Migration
             $table->date('birth_date')->nullable();
             $table->string('phone')->nullable();
             $table->string('address')->nullable();
-            $table->enum('keanggotaan', ['Kader Muhammadiyah', 'Warga Muhammadiyah', 'Simpatisan Muhammadiyah'])->default('Warga Muhammadiyah');
+            $table->enum('keanggotaan', ['pengurus', 'anggota'])->default('anggota');
             $table->string('job')->nullable();
             $table->string('kepakaran')->nullable();
             $table->string('email')->unique();

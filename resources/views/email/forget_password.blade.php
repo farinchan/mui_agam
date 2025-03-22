@@ -4,7 +4,7 @@
 		<tbody>
 			<tr>
 				<td align="center" valign="center" style="text-align:center; padding: 40px">
-					<img alt="Logo" style="height: 100px" src="https://res.cloudinary.com/do8klrf5z/image/upload/v1715317527/logo_sipar_kierhm.png" class="h-45px" />
+					<img alt="Logo" style="height: 100px" src="https://res.cloudinary.com/duuawbwih/image/upload/v1742631255/logo_fpwtij.png" class="h-45px" />
 				</td>
 			</tr>
 			<tr>
@@ -29,14 +29,14 @@
 						</div>
 						<!--end:Email content-->
 						<div style="padding-bottom: 10px">Salam hangat
-						<br>Manajemen Aiva Losmen
-						<tr>
-							<td align="center" valign="center" style="font-size: 13px; text-align:center;padding: 20px; color: #6d6e7c;">
-								<p>Jl. Nasional Jl. Swadaya No.Simpang, Rundeng, Kec. Johan Pahlawan<br>Kabupaten Aceh Barat, Aceh
-								<p>Copyright ©
-								<a href="https://aivalosmen.com/" rel="noopener" target="_blank">Aiva Losmen</a>.</p>
-							</td>
-						</tr></br></div>
+                            <br>Admin MUI Kab. Agam</div>
+                            <tr>
+                                <td align="center" valign="center" style="font-size: 13px; text-align:center;padding: 20px; color: #6d6e7c;">
+                                    <p>ALAMAT SEKRETARIAT</p>
+                                    <p>Copyright ©
+                                    <a href="https://muiagam.or.id" rel="noopener" target="_blank">Majelis Ulama Indonesia (MUI) Kab. Agam</a>.</p>
+                                </td>
+                            </tr></br></div>
 					</div>
 				</td>
 			</tr>

@@ -31,6 +31,9 @@ return Application::configure(basePath: dirname(__DIR__))
             'subscribe',
             'user/kajian/*',
             'user/profile',
+            '/admin/mui-kecamatan/upload',
+            '/admin/komisi/upload'
+
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

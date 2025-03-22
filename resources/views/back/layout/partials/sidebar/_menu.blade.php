@@ -321,7 +321,22 @@
                                 <span class="path5"></span>
                             </i>
                         </span>
-                        <span class="menu-title">Ortom Menu</span>
+                        <span class="menu-title">Komisi Menu</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a class="menu-link @if (request()->routeIs('admin.personalia.index')) active @endif"
+                        href="{{ route('admin.personalia.index') }}">
+                        <span class="menu-icon">
+                            <i class="ki-duotone ki-setting-3 fs-2">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                                <span class="path3"></span>
+                                <span class="path4"></span>
+                                <span class="path5"></span>
+                            </i>
+                        </span>
+                        <span class="menu-title">MUI Kecamatan</span>
                     </a>
                 </div>
 

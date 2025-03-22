@@ -87,15 +87,10 @@
                                                         <select name="keanggotaan" class="form-select"
                                                             aria-label="Default select example">
                                                             <option>Semua</option>
-                                                            <option value="Kader Muhammadiyah"
-                                                                @if (request('keanggotaan') == 'Kader Muhammadiyah') selected @endif>Kader
-                                                                Muhammadiyah</option>
-                                                            <option value="Warga Muhammadiyah"
-                                                                @if (request('keanggotaan') == 'Warga Muhammadiyah') selected @endif>Warga
-                                                                Muhammadiyah</option>
-                                                            <option value="Simpatisan Muhammadiyah"
-                                                                @if (request('keanggotaan') == 'Simpatisan Muhammadiyah') selected @endif>Simpatisan
-                                                                Muhammadiyah</option>
+                                                            <option value="anggota"
+                                                                @if (request('keanggotaan') == 'anggota') selected @endif>Anggota MUI Agam</option>
+                                                            <option value="pengurus"
+                                                                @if (request('keanggotaan') == 'pengurus') selected @endif>Pengurus MUI Agam</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -121,7 +116,7 @@
                                         <div class="text-center pt-4">
 
                                             <img class="card-img-top " alt="avatar1" src="{{ $user->getPhoto() }}"
-                                                style="height: 150px; width: auto; margin: 0 auto;
+                                                style="height: 150px; width: 150px; margin: 0 auto;
                                              border-radius: 50%; object-fit: cover;" />
                                         </div>
                                         <div class="card-body text-center">

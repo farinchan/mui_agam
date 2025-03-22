@@ -4,7 +4,7 @@
 		<tbody>
 			<tr>
 				<td align="center" valign="center" style="text-align:center; padding: 40px">
-					<img alt="Logo" style="height: 100px" src="https://res.cloudinary.com/dyrpc5ucl/image/upload/v1725405995/favicon_usumqu.png"
+					<img alt="Logo" style="height: 100px" src="https://res.cloudinary.com/duuawbwih/image/upload/v1742631255/logo_fpwtij.png"
 					 class="h-45px" />
 				</td>
 			</tr>
@@ -16,16 +16,16 @@
 							<strong>Assalamualaikum Wr, Wb!, {{ $user->name }}</strong>
 						</div>
 						<div style="padding-bottom: 30px">
-							Anda telah ditambahkan sebagai anggota Muhammadiyah Bukittinggi oleh Admin, Silahkan Login <a href="{{ route('login') }}">Disini</a> Dengan Email Anda {{ $user->email }}
+							Anda telah ditambahkan sebagai anggota MUI Kab. Agam oleh Admin, Silahkan Login <a href="{{ route('login') }}">Disini</a> Dengan Email Anda {{ $user->email }}
 						</div>
 						<!--end:Email content-->
 						<div style="padding-bottom: 10px">Salam hangat
-						<br>Admin Pimpinan Daerah Muhammadiyah Bukittinggi
+						<br>Admin MUI Kab. Agam</div>
 						<tr>
 							<td align="center" valign="center" style="font-size: 13px; text-align:center;padding: 20px; color: #6d6e7c;">
 								<p>ALAMAT SEKRETARIAT</p>
 								<p>Copyright ©
-								<a href="https://muhammadiyahbukittinggi.org" rel="noopener" target="_blank">Pimpinan Daerah Muhammadiyah Bukittinggi</a>.</p>
+								<a href="https://muiagam.or.id" rel="noopener" target="_blank">Majelis Ulama Indonesia (MUI) Kab. Agam</a>.</p>
 							</td>
 						</tr></br></div>
 					</div>

@@ -82,8 +82,6 @@ class AuthController extends Controller
             'address' => 'required',
             'phone' => 'required',
             'keanggotaan' => 'required',
-            'ktam' => 'required',
-            'nbm' => 'nullable',
             'job' => 'required',
             'kepakaran' => 'nullable',
             'email' => 'required|email|unique:users,email',
@@ -126,8 +124,6 @@ class AuthController extends Controller
         $user->address = $request->address;
         $user->phone = $request->phone;
         $user->keanggotaan = $request->keanggotaan;
-        $user->ktam = $request->ktam;
-        $user->nbm = $request->nbm;
         $user->job = json_encode($request->job);
         $user->kepakaran = json_encode($request->kepakaran);
         $user->email = $request->email;
@@ -138,7 +134,7 @@ class AuthController extends Controller
 
         Mail::send('email.register_mail', ['user' => $user], function ($message) use ($user) {
             $message->to($user->email);
-            $message->subject('Permintaan Pendaftaran Keanggotaan Muhammadiyah');
+            $message->subject('Permintaan Pendaftaran Keanggotaan MUI Kab. Agam');
         });
 
         Alert::success('Success', 'Pendaftaran berhasil, Permintaan pendaftaran anda sedang diproses oleh admin kami, silahkan cek email anda untuk informasi lebih lanjut');

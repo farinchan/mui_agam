@@ -4,7 +4,7 @@
 		<tbody>
 			<tr>
 				<td align="center" valign="center" style="text-align:center; padding: 40px">
-					<img alt="Logo" style="height: 100px" src="https://res.cloudinary.com/dyrpc5ucl/image/upload/v1725405995/favicon_usumqu.png"
+					<img alt="Logo" style="height: 100px" src="https://res.cloudinary.com/duuawbwih/image/upload/v1742631255/logo_fpwtij.png"
 					 class="h-45px" />
 				</td>
 			</tr>
@@ -16,18 +16,18 @@
 							<strong>Assalamualaikum Wr, Wb!, {{ $user->name }}</strong>
 						</div>
 						<div style="padding-bottom: 30px">
-							Anda Telah Mengajukan Permintaan Pendaftaran Keanggotaan Muhammadiyah Bukittinggi, Silahkan Tunggu Konfirmasi Dari Admin Melalui Email Anda {{ $user->email }}
+							Anda Telah Mengajukan Permintaan Pendaftaran Keanggotaan MUI Kab. Agam, Silahkan Tunggu Konfirmasi Dari Admin Melalui Email Anda {{ $user->email }}
 						</div>
 						<!--end:Email content-->
 						<div style="padding-bottom: 10px">Salam hangat
-						<br>Admin Pimpinan Daerah Muhammadiyah Bukittinggi
-						<tr>
-							<td align="center" valign="center" style="font-size: 13px; text-align:center;padding: 20px; color: #6d6e7c;">
-								<p>ALAMAT SEKRETARIAT</p>
-								<p>Copyright ©
-								<a href="muhammadiyahbukittinggi.org" rel="noopener" target="_blank">Pimpinan Daerah Muhammadiyah Bukittinggi</a>.</p>
-							</td>
-						</tr></br></div>
+                            <br>Admin MUI Kab. Agam</div>
+                            <tr>
+                                <td align="center" valign="center" style="font-size: 13px; text-align:center;padding: 20px; color: #6d6e7c;">
+                                    <p>ALAMAT SEKRETARIAT</p>
+                                    <p>Copyright ©
+                                    <a href="https://muiagam.or.id" rel="noopener" target="_blank">Majelis Ulama Indonesia (MUI) Kab. Agam</a>.</p>
+                                </td>
+                            </tr></br></div>
 					</div>
 				</td>
 			</tr>

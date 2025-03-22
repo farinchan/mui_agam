@@ -98,9 +98,22 @@
         if ($(window).width() < 768) {
             $('#login_mobile').show();
             console.log('mobile');
+
         } else {
             $('#login_mobile').hide();
             console.log('desktop');
+            $(window).on('scroll', function() {
+                if ($(window).scrollTop() / $(document).height() >= 0.04) {
+                    $('#right_side').css('display', 'none');
+
+                    $('#left_side').removeClass('col-xl-9 col-lg-9 ');
+
+                } else {
+                    $('#right_side').css('display', 'block');
+                    $('#left_side').addClass('col-xl-9 col-lg-9 ');
+                }
+            });
+
         }
     </script>
 

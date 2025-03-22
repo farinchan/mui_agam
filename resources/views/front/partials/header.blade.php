@@ -86,7 +86,7 @@
             <div class="header-bottom header-sticky">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-xl-9 col-lg-9 col-md-12 header-flex">
+                        <div class="col-xl-9 col-lg-9 col-md-12 header-flex" id="left_side">
                             <!-- sticky -->
                             <div class="sticky-logo mt-2">
                                 <a href="{{ route('home') }}"><img src="{{ Storage::url($setting_web->logo) }}"
@@ -125,7 +125,7 @@
                                         <li><a href="{{ route('kajian') }}" style="font-size: 16px">Kajian</a></li>
                                         <li><a href="{{ route('asset') }}" style="font-size: 16px">Asset</a></li>
                                         <li><a href="{{ route('keanggotaan') }}" style="font-size: 16px">Da'i MUI</a></li>
-                                        <li><a href="#" style="font-size: 16px">Ortom</a>
+                                        <li><a href="#" style="font-size: 16px">Komisi</a>
                                             <ul class="submenu">
                                                 @php
                                                     $list_ortom = \App\Models\OrganisasiOtonom::all();
@@ -137,9 +137,21 @@
                                                 @endforeach
                                             </ul>
                                         </li>
+                                        <li><a href="#" style="font-size: 16px">MUI Kecamatan</a>
+                                            <ul class="submenu">
+                                                @php
+                                                    $list_kec = \App\Models\MuiKecamatan::all();
+                                                @endphp
+                                                @foreach ($list_kec as $kec)
+                                                    <li><a
+                                                            href="{{ route('mui-kecamatan', $kec->slug) }}">{{ $kec->name }}</a>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        </li>
                                         <li><a href="{{ route('contact') }}" style="font-size: 16px">Kontak</a></li>
 
-                                        <div id="login_mobile" >
+                                        <div id="login_mobile">
                                             @auth
                                                 <li>
                                                     <a
@@ -168,14 +180,8 @@
                                 </nav>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-3 col-md-4 my-3 me-3 ">
-                            {{-- <div class="input-group">
-                                <span class="input-group-text">
-                                    <i class="fas fa-search special-tag"></i>
-                                </span>
-                                <input type="text" class="form-control" placeholder="Cari Ustadz"
-                                    aria-label="Username" aria-describedby="basic-addon1">
-                            </div> --}}
+                        <div class="col-xl-3 col-lg-3 col-md-4 my-3 me-3" id="right_side">
+
                             <div class="input-group-icon mt-10 pr-5">
                                 <div class="icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                                 </div>
@@ -183,18 +189,17 @@
                                     <input type="text" name="q" placeholder="Cari Ustadz"
                                         onfocus="this.placeholder = ''" onblur="this.placeholder = 'Cari Ustadz'"
                                         value="{{ request()->q }}" required="" class="single-input">
-                                    {{-- <button type="submit" class="btn btn-primary">Cari</button> --}}
                                 </form>
                             </div>
-                            <!-- <div class="header-right-btn f-right d-none d-lg-block">
+                             {{-- <div class="header-right-btn f-right d-none d-lg-block">
                                 <i class="fas fa-search special-tag"></i>
                                 <div class="search-box">
-                                    <form action="#">
-                                        <input type="text" placeholder="Search">
+                                    <form action="{{ route('ustadz.search') }}" method="GET">
+                                        <input type="text" placeholder="Cari Ustadz" name="q" required="" value="{{ request()->q }}">
 
                                     </form>
                                 </div>
-                            </div> -->
+                            </div> --}}
                         </div>
                         <!-- Mobile Menu -->
                         <div class="col-12">

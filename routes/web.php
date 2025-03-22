@@ -31,8 +31,10 @@ use App\Http\Controllers\Back\inboxController as BackInboxController;
 use App\Http\Controllers\Back\SettingController as BackSettingController;
 use App\Http\Controllers\Back\ProfileController as BackProfileController;
 use App\Http\Controllers\Back\OrtomController as BackOrtomController;
+use App\Http\Controllers\Back\MuiKecamatanController as BackMuiKecamatanController;
 use App\Http\Controllers\Front\EventController;
 use App\Http\Controllers\Front\GalleryController;
+use App\Http\Controllers\Front\MuiKecamatanController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/visit', [HomeController::class, 'vistWebsite'])->name('visit.ajax');
@@ -73,7 +75,8 @@ Route::get('/asset', [AssetController::class, 'asset'])->name('asset');
 Route::get('/keanggotaan', [KeanggotaanController::class, 'index'])->name('keanggotaan');
 Route::get('/keanggotaan/{id}', [KeanggotaanController::class, 'detail'])->name('keanggotaan.detail');
 
-Route::get('/ortom/{slug}', [OrtomController::class, 'ortom'])->name('ortom');
+Route::get('/komisi/{slug}', [OrtomController::class, 'ortom'])->name('ortom');
+Route::get('/mui-kecamatan/{slug}', [MuiKecamatanController::class, 'kecamatan'])->name('mui-kecamatan');
 
 Route::get('/ustadz', [UstadzController::class, 'search'])->name('ustadz.search');
 
@@ -238,11 +241,21 @@ Route::prefix('admin')->middleware(['auth', 'role:admin'])->name('admin.')->grou
         Route::delete('/delete/{id}', [BackProfileController::class, 'destroy'])->name('destroy');
     });
 
-    Route::prefix('ortom')->name('ortom.')->group(function () {
+    Route::prefix('komisi')->name('ortom.')->group(function () {
         Route::get('/', [BackOrtomController::class, 'index'])->name('index');
         Route::post('/create', [BackOrtomController::class, 'store'])->name('store');
         Route::get('/edit/{id}', [BackOrtomController::class, 'edit'])->name('edit');
         Route::put('/edit/{id}', [BackOrtomController::class, 'update'])->name('update');
         Route::delete('/delete/{id}', [BackOrtomController::class, 'destroy'])->name('destroy');
+    });
+
+    Route::prefix('mui-kecamatan')->name('personalia.')->group(function () {
+        Route::get('/', [BackMuiKecamatanController::class, 'index'])->name('index');
+        Route::post('/create', [BackMuiKecamatanController::class, 'store'])->name('store');
+        Route::get('/edit/{id}', [BackMuiKecamatanController::class, 'edit'])->name('edit');
+        Route::put('/edit/{id}', [BackMuiKecamatanController::class, 'update'])->name('update');
+        Route::delete('/delete/{id}', [BackMuiKecamatanController::class, 'destroy'])->name('destroy');
+
+        Route::post('/upload', [BackMuiKecamatanController::class, 'upload'])->name('upload');
     });
 });

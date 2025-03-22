@@ -214,7 +214,7 @@
                                 @enderror
                             </div>
                         </div>
-                        {{-- 
+                        {{--
                         <div class="form-group row">
                             <label for="Koordinat" class="col-md-3 col-form-label text-md-right">{{ __('Koordinat') }}
                                 <span class="text-danger">*</span>
@@ -421,63 +421,15 @@
                                         class="single-input form-select @error('keanggotaan') is-invalid @enderror"
                                         required>
                                         <option value="" disabled selected>Pilih Keanggotaan</option>
-                                        <option value="Kader Muhammadiyah"
-                                            @if (old('keanggotaan') == 'Kader Muhammadiyah') selected @endif>
-                                            Kader Muhammadiyah</option>
-                                        <option value="Warga Muhammadiyah"
-                                            @if (old('keanggotaan') == 'Warga Muhammadiyah') selected @endif>
-                                            Warga Muhammadiyah</option>
-                                        <option value="Simpatisan Muhammadiyah"
-                                            @if (old('keanggotaan') == 'Simpatisan Muhammadiyah') selected @endif>
-                                            Simpatisan Muhammadiyah</option>
+                                        <option value="pengurus"
+                                            @if (old('keanggotaan') == 'pengurus') selected @endif>
+                                            Pengurus MUI Agam</option>
+                                        <option value="anggota"
+                                            @if (old('keanggotaan') == 'anggota') selected @endif>
+                                            Anggota MUI Agam</option>
                                     </select>
                                 </div>
                                 @error('keanggotaan')
-                                    <span class="text-danger" role="alert">
-                                        <small>{{ $message }}</small>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="Memiliki KTAM"
-                                class="col-md-3 col-form-label text-md-right">{{ __('Memiliki KTAM') }}
-                                <span class="text-danger">*</span>
-                            </label>
-                            <div class="col-md-8">
-                                <div class="input-group-icon">
-                                    <div class="icon"><i class="fa-regular fa-id-card"></i></div>
-                                    <select name="ktam" id="ktam"
-                                        class="single-input form-select @error('ktam') is-invalid @enderror" required>
-                                        <option value="" disabled selected>Pilih </option>
-                                        <option value="Ada" @if (old('ktam') == 'Ada') selected @endif>Ada
-                                        </option>
-                                        <option value="Tidak Ada" @if (old('ktam') == 'Tidak Ada') selected @endif>Tidak
-                                            Ada</option>
-                                    </select>
-                                </div>
-                                @error('ktam')
-                                    <span class="text-danger" role="alert">
-                                        <small>{{ $message }}</small>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="NBM" class="col-md-3 col-form-label text-md-right">{{ __('NBM') }}
-
-                            </label>
-                            <div class="col-md-8">
-                                <div class="input-group-icon">
-                                    <div class="icon"><i class="fa-regular fa-id-card"></i></div>
-                                    <input type="text" placeholder="NBM" onfocus="this.placeholder = ''"
-                                        onblur="this.placeholder = 'NBM'"
-                                        class="single-input @error('nbm') is-invalid @enderror" name="nbm"
-                                        value="{{ old('nbm') }}" autocomplete="nbm">
-                                </div>
-                                @error('nbm')
                                     <span class="text-danger" role="alert">
                                         <small>{{ $message }}</small>
                                     </span>
@@ -536,7 +488,7 @@
                                                 <label for="default-checkbox"></label>
                                             </div>
                                             Saya menyetujui Syarat dan
-                                            Ketentuan Keanggotaan Muhammadiyah
+                                            Ketentuan Keanggotaan MUI Agam
                                         </div>
                                     </div>
                                 </div>
@@ -553,7 +505,7 @@
                 </div>
                 <div class="col-md-4">
 
-                   
+
                     <br>
 
                     <h3>
