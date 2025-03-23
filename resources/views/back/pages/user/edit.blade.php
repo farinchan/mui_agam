@@ -194,7 +194,7 @@
                                     <option value="" disabled selected>Pilih Keanggotaan</option>
                                         <option value="anggota" @if ($user->keanggotaan == 'anggota') selected @endif>
                                             Anggota MUI Agam</option>
-                                        <option value="Warga Muhammadiyah" @if ($user->keanggotaan == 'pengurus') selected @endif>
+                                        <option value="pengurus" @if ($user->keanggotaan == 'pengurus') selected @endif>
                                             Pengurus MUI Agam</option>
                                 </select>
                                 @error('keanggotaan')
