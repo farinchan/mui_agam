@@ -192,18 +192,16 @@
                                 <label class="required form-label">Keanggotaan</label>
                                 <select name="keanggotaan" class="form-select mb-2" required>
                                     <option value="" disabled selected>Pilih Keanggotaan</option>
-                                        <option value="Kader Muhammadiyah" @if ($user->keanggotaan == 'Kader Muhammadiyah') selected @endif>
-                                            Kader Muhammadiyah</option>
-                                        <option value="Warga Muhammadiyah" @if ($user->keanggotaan == 'Warga Muhammadiyah') selected @endif>
-                                            Warga Muhammadiyah</option>
-                                        <option value="Simpatisan Muhammadiyah" @if ($user->keanggotaan == 'Simpatisan Muhammadiyah') selected @endif>
-                                            Simpatisan Muhammadiyah</option>
+                                        <option value="anggota" @if ($user->keanggotaan == 'anggota') selected @endif>
+                                            Anggota MUI Agam</option>
+                                        <option value="Warga Muhammadiyah" @if ($user->keanggotaan == 'pengurus') selected @endif>
+                                            Pengurus MUI Agam</option>
                                 </select>
                                 @error('keanggotaan')
                                     <div class="text-danger fs-7">{{ $message }}</div>
                                 @enderror
                             </div>
-                            
+
                             <div class="mb-5 fv-row">
                                 <label class="required form-label">Email</label>
                                 <input type="email" name="email" class="form-control mb-2" placeholder="Email"

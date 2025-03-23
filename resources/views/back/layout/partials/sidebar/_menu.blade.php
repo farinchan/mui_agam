@@ -188,7 +188,7 @@
                     </a>
                 </div>
 
-                <div class="menu-item pt-5">
+                {{-- <div class="menu-item pt-5">
                     <div class="menu-content"><span class="menu-heading fw-bold text-uppercase fs-7">Asset</span>
                     </div>
                 </div>
@@ -246,7 +246,7 @@
                             </div>
                         @endforeach
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="menu-item pt-5">
                     <div class="menu-content"><span

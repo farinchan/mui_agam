@@ -188,18 +188,16 @@
                                 <label class="required form-label">Keanggotaan</label>
                                 <select name="keanggotaan" class="form-select mb-2" required>
                                     <option value="" disabled selected>Pilih Keanggotaan</option>
-                                        <option value="Kader Muhammadiyah" @if (old('keanggotaan') == 'Kader Muhammadiyah') selected @endif>
-                                            Kader Muhammadiyah</option>
-                                        <option value="Warga Muhammadiyah" @if (old('keanggotaan') == 'Warga Muhammadiyah') selected @endif>
-                                            Warga Muhammadiyah</option>
-                                        <option value="Simpatisan Muhammadiyah" @if (old('keanggotaan') == 'Simpatisan Muhammadiyah') selected @endif>
-                                            Simpatisan Muhammadiyah</option>
+                                        <option value="anggota" @if (old('keanggotaan') == 'anggota') selected @endif>
+                                            Anggota MUI Agam</option>
+                                        <option value="pengurus" @if (old('keanggotaan') == 'pengurus') selected @endif>
+                                            Pengurus MUI Agam</option>
                                 </select>
                                 @error('keanggotaan')
                                     <div class="text-danger fs-7">{{ $message }}</div>
                                 @enderror
                             </div>
-                            
+
                             <div class="mb-5 fv-row">
                                 <label class="required form-label">Email</label>
                                 <input type="email" name="email" class="form-control mb-2" placeholder="Email"
