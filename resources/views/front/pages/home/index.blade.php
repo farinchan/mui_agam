@@ -657,6 +657,14 @@
                                                     <textarea name="message" class="single-textarea" placeholder="Message" onfocus="this.placeholder = ''"
                                                         onblur="this.placeholder = 'Message'" required="" style="height: 200px;"></textarea>
                                                 </div>
+                                                <div class="mb-3">
+                                                    {!! NoCaptcha::renderJs() !!}
+                                                    {!! NoCaptcha::display() !!}
+
+                                                    @error('g-recaptcha-response')
+                                                        <div class="text-danger">{{ $message }}</div>
+                                                    @enderror
+                                                </div>
                                                 <button type="submit" class="btn btn-success">Kirim</button>
                                             </div>
 
